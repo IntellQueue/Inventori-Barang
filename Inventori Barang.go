@@ -45,6 +45,7 @@ func main() {
 		pencariankatakuncibarang()
 	case 3:
 		fmt.Println("Pencarian Kategori Tertentu...")
+		pemasukandata(a, &d, arrayjumlah)
 		pencarianbarangkategori()
 	case 4:
 		fmt.Println("Tampilan Semua Data Barang")
@@ -481,6 +482,7 @@ func tampilArraySort(d tabBarang) {
 func insertionSort() {
 	inSort(&d)
 	tampilArraySort(d)
+	main()
 }
 func inSort(d *tabBarang) {
 	var i, j int
