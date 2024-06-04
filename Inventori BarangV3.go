@@ -462,8 +462,10 @@ func binarySearch(d tabBarang, arrayjumlah int) {
 	binSearch(d, menuInput, arrayjumlah)
 	if binSearch(d, menuInput, arrayjumlah) == -1 {
 		fmt.Println("Jumlah Stok Tidak Ketemu")
+		main()
 	} else {
 		fmt.Println("Angka", menuInput, "Ketemu Pada Array", binSearch(d, menuInput, arrayjumlah))
+		main()
 	}
 	main()
 }
@@ -471,7 +473,7 @@ func binSearch(d tabBarang, n int, arrayjumlah int) int {
 	var kr, kn, med int
 	var found int = -1
 	kr = 0
-	kn = arrayjumlah - 1
+	kn = arrayjumlah - 2
 	for kr <= kn && found == -1 {
 		med = (kr + kn) / 2
 		if n < d[med].jumlahStok {
